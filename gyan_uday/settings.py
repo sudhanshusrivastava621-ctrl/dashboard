@@ -21,8 +21,11 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get(
     'ALLOWED_HOSTS',
-    'localhost,127.0.0.1,0.0.0.0'
-).split(',')
+    'localhost,127.0.0.1,0.0.0.0,dashboard-1-zkzc.onrender.com').split
+
+csrf_trusted_origins = [
+
+    'http://localhost,https://dashboard-1-zkzc.onrender.com']
 
 
 # ─────────────────────────────────────────────
